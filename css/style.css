@@ -714,3 +714,33 @@ textarea {
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
 
+.modal-text{
+  margin-top: 20px; 
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+
+/* Clase para el encabezado del modal */
+.modal-header-custom {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+/* Clase para el botón de cierre del modal */
+.modal-close-button {
+    background-color: aliceblue;
+}
+
+/* Clase para el párrafo del modal */
+.modal-paragraph {
+    margin-top: 20px;
+}
+
+/* Clase para la imagen del modal */
+.modal-image {
+    max-width: 80%;
+}
+
