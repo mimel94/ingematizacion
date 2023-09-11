@@ -23,7 +23,14 @@
 		<link href="css/style.css" rel="stylesheet">
 		<title>Contacto - Ingematización</title>
 	</head>
-
+  <script>
+      window.onload = function() { 
+      var el = document.getElementById('g-recaptcha-response'); 
+      if (el) { 
+        el.setAttribute('required', 'required'); 
+      } 
+}
+  </script>
 	<body>
 
 		<!-- Start Header/Navigation -->
@@ -94,7 +101,7 @@
                     <label class="text-black" for="message">Mensajes</label>
                     <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
                 </div>
-        
+                <div class="g-recaptcha" data-sitekey="6LeZWxYoAAAAAOVfdgCZh0tvyyGIlSH6P2Mjbbo9"></div> 
                 <button type="button" onclick="enviarFormulario()" class="btn btn-primary-hover-outline">Enviar mensaje</button>
             </form>
         
