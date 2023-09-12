@@ -21,6 +21,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title>Contacto - Ingematización</title>
 	</head>
   <script>
@@ -101,7 +102,7 @@
                     <label class="text-black" for="message">Mensajes</label>
                     <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LeZWxYoAAAAAOVfdgCZh0tvyyGIlSH6P2Mjbbo9"></div> 
+                <!--<div class="g-recaptcha" data-sitekey="6Lctah0oAAAAAD4SF4ldouxa5kJz7XJ_oocGySyk"></div> -->
                 <button type="button" onclick="enviarFormulario()" class="btn btn-primary-hover-outline">Enviar mensaje</button>
             </form>
         
@@ -110,17 +111,15 @@
                     var fname = document.getElementById('fname').value;
                     var lname = document.getElementById('lname').value;
                     var email = document.getElementById('email').value;
-                    var message = document.getElementById('message').value;
-        
+                    var message = document.getElementById('message').value;        
                     var fullName = fname + ' ' + lname;
-                    var finalMessage = fullName + '\n\n' + message;
         
                     fetch('https://formspree.io/f/xvojrekw', {
                         method: 'POST',
                         body: JSON.stringify({
                             name: fullName,
                             email: email,
-                            message: finalMessage
+                            message: message
                         }),
                         headers: {
                             'Content-Type': 'application/json'
