@@ -102,7 +102,7 @@
                     <label class="text-black" for="message">Mensajes</label>
                     <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6Lctah0oAAAAAD4SF4ldouxa5kJz7XJ_oocGySyk"></div> 
+                <!--<div class="g-recaptcha" data-sitekey="6Lctah0oAAAAAD4SF4ldouxa5kJz7XJ_oocGySyk"></div> -->
                 <button type="button" onclick="enviarFormulario()" class="btn btn-primary-hover-outline">Enviar mensaje</button>
             </form>
         
@@ -111,10 +111,8 @@
                     var fname = document.getElementById('fname').value;
                     var lname = document.getElementById('lname').value;
                     var email = document.getElementById('email').value;
-                    var message = document.getElementById('message').value;
-        
+                    var message = document.getElementById('message').value;        
                     var fullName = fname + ' ' + lname;
-                    //var finalMessage = fullName + '\n\n' + message;
         
                     fetch('https://formspree.io/f/xvojrekw', {
                         method: 'POST',
@@ -131,7 +129,6 @@
                     .then(data => {
                         alert('Mensaje enviado con éxito. ¡Gracias por contactarnos!');
                         document.getElementById('formulario-contacto').reset();
-                        //grecaptcha.reset();
                     })
                     .catch(error => {
                         alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
